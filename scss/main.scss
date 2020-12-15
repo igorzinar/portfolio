@@ -7,15 +7,15 @@
 
 body {
   @include background;
-  background-color: $primary-color;
-  color: #fff;
+  background: $primary-color;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
-// Heading
+// Headings
 h1,
 h2,
 h3 {
@@ -50,16 +50,18 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
+
     a {
       padding: 0.4rem;
+      @include easeOut;
 
       &:hover {
         color: $secondary-color;
-        @include easeOut();
       }
     }
   }
@@ -71,3 +73,52 @@ main {
     }
   }
 }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    'bio-image bio bio'
+    'experience1 experience2 experience3';
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-image {
+  grid-area: bio-image;
+  margin: auto;
+  border-radius: 50%;
+  border: $secondary-color 3px solid;
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.experience-1 {
+  grid-area: experience1;
+}
+
+.experience-2 {
+  grid-area: experience2;
+}
+
+.experience-3 {
+  grid-area: experience3;
+}
+
+.experience {
+  background: darken($primary-color, 6);
+  padding: 0.5rem;
+  border-bottom: $secondary-color 5px solid;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 20);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import 'mobile';
