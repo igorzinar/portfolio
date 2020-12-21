@@ -2,7 +2,7 @@
   "name": "myportfolio",
   "version": "1.0.0",
   "description": "Portfolion website",
-  "homepage": "",
+  "homepage": "https://igorzinar.github.io/simple_portfolio",
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive ",
