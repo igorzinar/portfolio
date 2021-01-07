@@ -134,6 +134,28 @@ main {
   }
 }
 
+/* .project-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    flex: 1 1 0;
+    width: 0;
+    margin: 10px;
+    img {
+      width: 100%;
+      // height: auto;
+      border: 3px solid #fff;
+      border-radius: 3px;
+
+      &:hover {
+        transform: scale(0.9);
+        border-color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+} */
 // Contact Page
 .boxes {
   display: flex;
