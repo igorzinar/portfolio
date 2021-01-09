@@ -86,11 +86,10 @@
       // Slide in from bottom
       transform: translate3d(0, 0, 0);
     }
-
-    .portrait {
+    .portrait img {
       width: 250px;
       height: 250px;
-      background: url('../img/photo.jpg') center;
+      // background: url('../img/photo.jpg') center;
       border-radius: 50%;
       border: solid 3px $secondary-color;
     }
